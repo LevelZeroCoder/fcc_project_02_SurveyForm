@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Hotel Reservation Form - by LevelZeroCoder</title>
+	<link rel="stylesheet" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<main>
+		<form class="mainbox-form" id="survey-form">
+			<div class="sub-box-form-heading">
+				<h1 id="title">Make a Reservation!</h1>
+				<p id="description">Please fill out details below for a hassle free experience</p>
+			</div>
+			<div class="sub-box-form-body">
+				<div class="form-body-left-box">
+					<label for="name"  id="name-label">NAME: </label>
+					<input type="text" name="name" placeholder="First Name" id="name" required/>
+					<label for="email" id="email-label">EMAIL: </label><input type="email" name="email" placeholder="example@example.com" id="email" required/>
+					<label for="number" id="number-label">Reserve for: </label><input type="number" name="day" id="number" placeholder="Days of stay" min="1" max="150"/>
+
+					<div class="radio-button-container">
+						<p>Do you Have any Health Problem? (If yes, Specify in commentbox below)</p>
+						<div class="radio-button-div">
+							<label><input type="radio" name="health-status" value="yes"/>YES</label>
+							<label><input type="radio" name="health-status" value="no"/>NO</label>
+							<label><input type="radio" name="health-status" value="not sure"/>NOT SURE</label>
+						</div>
+					</div>
+					<div class="dropdown-option-container">
+						<p>Room for How many People?</p>
+						<select id="dropdown">
+							<option value="" selected disabled>--Select Booking Type--</option>
+							<option value="single">Single Person (1-Room, Single Bed)</option>
+							<option value="">Couple (1-Room, Single Bed)</option>
+							<option value="">Two Person (2-Room, 2-Bed)</option>
+							<option value="">Family (2-Room, 2-Bed)</option>
+							<option value="">Family (3-Room, 3-Bed)</option>
+							<option value="">Large Family(4-Room. 4-Bed)</option>
+							<option value="">Custom Reservation (Comment box below)</option>
+						</select>
+					</div>
+				</div>		
+				<div class="form-body-right-box">
+					<div class="checkbox-area-container">
+						<p>Additional Services Requirements</p>
+						<label><input type="checkbox" name="service-required" value="food-and-drinks" checked disabled="">Food & Drinks, Wi-Fi (Included)</label>
+						<label><input type="checkbox" name="service-required" value="Spa">Spa</label>
+						<label><input type="checkbox" name="service-required" value="transport">Transport</label>
+						<label><input type="checkbox" name="service-required" value="tour-guide">Tour-Guide</label>
+						<label><input type="checkbox" name="service-required" value="pet-care">Pet-Care</label>	
+					</div>
+					<div class="text-area-container">
+						<textarea placeholder="Enter your comment ..."></textarea>
+					</div>
+					<div class="button-container">
+						<button type="submit" name="submit" id="submit">SUBMIT</button>
+						<button type="reset" name="reset" id="reset" class="reset-button">RESET</button>	
+					</div>
+				</div>
+			</div>
+		</form>
+	</main>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
